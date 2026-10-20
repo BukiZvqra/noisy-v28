@@ -320,3 +320,7 @@ h2.k26w .w{padding:0!important}
 
 /* v28: влачене на картите */
 .k26-big{cursor:grab;user-select:none;-webkit-user-select:none}.k26-big:active{cursor:grabbing}.k26-cd img{-webkit-user-drag:none;pointer-events:none}
+/* 20.10 (Коста, [38]): бележката под логата се изрязваше от долния ръб на сцената (до -30px на 1536x864); блокът е сгъстен */
+@media(min-width:735px){.ag-stick:has(.k26-big) .ar-lgw{margin-top:22px}
+.ag-stick:has(.k26-big) .ar-note{margin-top:14px!important}
+.ag-stick:has(.k26-big) .ag-shelves{translate:0 -24px}}

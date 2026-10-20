@@ -27,3 +27,14 @@
 @keyframes h28up{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
 @media(max-width:760px){.h28{height:200vh}.h28-copy .ctas{flex-direction:column;gap:12px}.h28-copy .ctas .btn{width:100%;max-width:320px}}
 @media(prefers-reduced-motion:reduce){.h28{height:auto}.h28-st{position:relative}.h28-copy h1,.h28-copy .sub,.h28-copy .ctas{animation:none}}
+
+/* преливане към модулите: в края на скрола долната тъмна сянка изчезва, видеото остава на цял екран и плавно минава в първата карта */
+.h28-shade{opacity:calc(1 - var(--p,0)*1.6)}
+.h28-st::after{content:"";position:absolute;inset:0;z-index:4;pointer-events:none;background:#0E0A12;opacity:0}
+/* 20.10 (Коста: „ефектът не прелива“): хирото се застъпва с първия екран на модулите (същото видео на цял екран отдолу, синхронизирано по кадър)
+   и в края на скрола плавно избледнява, така че няма шев между двете секции */
+.h28{z-index:6;margin-bottom:-100vh}
+.h28-st{opacity:var(--o,1)}
+.h28.gone{pointer-events:none}
+@media(prefers-reduced-motion:reduce){.h28{margin-bottom:0}}
+.h28{background:transparent}
