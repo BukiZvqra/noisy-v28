@@ -38,3 +38,11 @@
 .h28.gone{pointer-events:none}
 @media(prefers-reduced-motion:reduce){.h28{margin-bottom:0}}
 .h28{background:transparent}
+/* 21.10 (Лили, [40]): на нисък лаптоп екран бутонът се режеше. Хирото започваше под хедъра (88px), а е високо цял екран,
+   така че долните 88px излизаха извън екрана. Сега хирото минава под прозрачния хедър и е точно колкото екрана;
+   заглавието се смалява и по височина на екрана */
+.h28{margin-top:calc(var(--hh,88px) * -1)}
+.h28-st{min-height:0;height:100vh;height:100svh}
+.h28-copy h1{font-size:clamp(28px,min(4.2vw,8.4vh),80px)}
+.h28-copy .sub{margin-top:clamp(10px,2vh,18px)}
+.h28-copy .ctas{margin-top:clamp(14px,2.8vh,26px)}
