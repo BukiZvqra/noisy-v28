@@ -1,0 +1,18 @@
+/* 21.10 (Коста: „на телефон отстоянията са прекалено големи, виж какъв е стандартът“).
+   Стандарт: измерената библиотека (.design-library, apple.com) - на телефон стъпките между блоковете са 41-47px,
+   на компютър 80-156px. Тук: между секциите ~72px (32 отдолу + 40 отгоре), вътре в секцията ~40-48px.
+   Само за телефон (до 734px), зарежда се последен. */
+@media(max-width:734px){
+ main>section.sec,main>section.nfaq,main>section.k26-om,main>section.ar-sec{padding-top:40px!important;padding-bottom:32px!important}
+ footer.foot{padding-top:40px!important}
+ .platforms .wa{padding-top:0!important;padding-bottom:0!important}
+ main>section#livescore{margin-top:0!important}
+ /* Theatre: бележката под логата -> „Повече от гледането.“ беше 110px (Arena 50px) */
+ .th-page main>section#kak{margin-top:-130px!important}
+ /* За нас */
+ main>section.za-sec,main>section.za-creator{padding-top:40px!important}
+ .a7-tk,.a7-lic,.a7-questions{padding-top:40px!important;padding-bottom:32px!important}
+ .a7-questions>.w{padding-top:0!important}
+ .za-creator{padding-bottom:32px!important}
+ .za-end{padding-top:48px!important;margin-top:32px!important}
+}

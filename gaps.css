@@ -25,4 +25,4 @@
 /* 20.10 (Коста, [39]): двойно повече отстояние „Ново съдържание всеки ден“ -> „Повече от гледане.“ на десктоп (86px -> ~172px) */
 @media(min-width:735px){.lili-host{margin-top:-24px}}
 /* 21.10 (Коста, [7] на телефон): „Ново съдържание всеки ден“ -> „Повече от гледане.“ беше 247px; намалено до ~130px */
-@media(max-width:734px){.lili-host{margin-top:-157px;position:relative;z-index:3}}
+@media(max-width:734px){.lili-host{margin-top:-157px;position:relative;z-index:3}.lili-host ~ #ceni{margin-top:0!important}}
