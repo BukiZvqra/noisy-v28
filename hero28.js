@@ -1,7 +1,7 @@
 /* v28 хиро: N се разтваря от мястото си при скрол (мащаб около точка вътре в символа), докато видеото изпълни екрана. */
 (function(){var s=document.querySelector('.h28');if(!s)return;var st=s.querySelector('.h28-st'),v=s.querySelector('video'),rm=matchMedia('(prefers-reduced-motion:reduce)').matches,t=0;
  var W=45.9721,H=48,AX=19,AY=38;
- function base(){var vw=innerWidth;if(vw<=760)return {sw:1.5*vw,sx:-.28*vw,sy:-.08*vw};var vh=st.clientHeight||innerHeight,k=Math.min(vw/1440,vh/900);return {sw:1040*k,sx:vw/2+(148-720)*k,sy:-272*k} /* 21.10: мащаб и по височина (артбордът е 1440x900), иначе на нисък екран N излизаше много по-висок от екрана и се виждаха само парчета */}
+ function base(){var vw=innerWidth;if(vw<=760)return {sw:1.5*vw,sx:-.28*vw,sy:-.08*vw};return {sw:.722*vw,sx:.103*vw,sy:-.189*vw}}
  function upd(){t=0;var hd=document.querySelector('.hdr');document.documentElement.style.setProperty('--hh',(hd?hd.offsetHeight:0)+'px');var b=base(),r=s.getBoundingClientRect(),run=Math.max(1,s.offsetHeight-innerHeight),p=rm?0:Math.max(0,Math.min(1,-r.top/run));
   var e=p*p*(3-2*p),k=1+Math.pow(e,1.6)*38;
   var sh=b.sw*H/W,ax=b.sx+AX/W*b.sw,ay=b.sy+AY/H*sh;
